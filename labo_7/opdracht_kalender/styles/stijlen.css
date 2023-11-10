@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+table {
+    width: 30%;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 0 solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(170, 170, 200);
+}
+
+td {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Verschillende types*/
+tr td.vorige-maand {
+    background-color: #999;
+}
+
+td.vakantie {
+    background-color: rgb(250, 120, 120);
+}
+
+tr td.dag-heading {
+    color: rgb(200, 190, 240);
+    background-color: rgb(35, 37, 70);
+}
+
+/* Weekends */
+td:first-child, td:last-child{
+    background-color: rgb(255, 220, 220);
+}
