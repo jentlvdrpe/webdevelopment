@@ -1,0 +1,73 @@
+body {
+    width: 95%;
+    margin: auto auto;
+    font-family: Verdana, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+h1, h2 {
+    color: rgb(00, 126, 126);
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 130%;
+}
+
+footer {
+    float:right;
+    font-size: 0.5em;
+    bottom: 0;
+    width: 100%;
+}
+
+.article {
+    text-align: left;
+    box-sizing: border-box;
+    width: 70%;
+}
+
+a {
+    color: black;
+}
+
+/* WEEKLY's */
+.weekly-specials {
+    float: right;
+    box-sizing: border-box;
+    width: 30%;
+    border: 3px rgb(00, 126, 126) solid;
+    background-image: url("../images/cocktail.gif");
+    background-repeat: repeat-x;
+    text-align: center;
+}
+
+.weekly-specials a:hover {
+    background-color: brown;
+}
+
+.weekly-specials h1{
+    color: black;
+    padding-top: 25px;
+}
+.weekly-specials h2 {
+    color: deeppink;
+}
+
+/* ID's */
+#guarantee {
+    margin: 30px;
+    padding: 20px;
+    color: rgb(68, 68, 68);
+    background-color: rgb(167, 206, 206);
+    background-image: url("../images/background.gif");
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 75px;
+    border: 4px white dotted;
+    font-style: italic;
+}
