@@ -1,0 +1,103 @@
+body{
+    font-family: Verdana , sans-serif;
+    background-color: #1F2833;
+}
+
+p {
+    color: #C5C6C7;
+}
+
+li, p{
+    color: #C5C6C7;
+}
+
+h1, h2, h3{
+    font-weight: lighter;
+    color: #66FCF1;
+}
+
+h1 {
+    font-variant: full-width;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10em;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+p.intro {
+    width: 40%;
+    text-align: center;
+    margin: 0 auto 100px;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: #45A29E;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    font: normal 12px/150% Verdana, Arial, Helvetica, sans-serif;
+    background: #fff;
+    overflow: hidden;
+    border: 6px solid #45A29E;
+    -webkit-border-radius: 19px;
+    -moz-border-radius: 19px;
+    border-radius: 19px;
+}
+
+table td,table th {
+    padding: 9px 15px;
+}
+
+table thead th {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #45A29E), color-stop(1, #45A29E) );
+    background:-moz-linear-gradient( center top, #45A29E 5%, #45A29E 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#45A29E', endColorstr='#45A29E');
+    background-color:#45A29E;
+    color:#C5C6C7;
+    font-size: 16px;
+    font-weight: bold;
+    border-left: 3px solid #45A29E;
+ }
+
+table thead th:first-child {
+        border: none;
+}
+
+table tbody td {
+    color: #1F2833;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+table tbody .alt td {
+    background: #C5C6C7;
+    color: #1F2833;
+}
+
+table tbody td:first-child {
+    border-left: none;
+}
+
+table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.hobbies{
+    background-color: #2B2D42;
+    margin-bottom: 30px;
+}
+
+img {
+    border: 5px solid black;
+}
+
+.onbekend{
+    background-color:red;
+}
