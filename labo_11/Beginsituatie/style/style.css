@@ -1,9 +1,9 @@
 /* items */
+
 body section {
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: repeat(3, auto);
 }
 
 section div {
@@ -44,6 +44,40 @@ section div {
     background: #4464a1;
 }
 
-@media screen and (max-width: 760px) {
-    
+@media screen and (max-width: 761px) {
+    body section{
+        grid-template-columns: 1fr 1fr;
+    }
+    .item-1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 1;
+    }
+
+    .item-3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 4;
+    }
+    .item-4 {
+        grid-column: 1;
+    }
+
+    .item-6 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 3;
+    }
+    .item-7 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 3;
+    }
+
+    .item-9 {
+        grid-row: 1;
+        grid-column: 1;
+    }
 }
+
+
