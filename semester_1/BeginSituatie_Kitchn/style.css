@@ -1,0 +1,23 @@
+/** Volgende CSS gaan we ze geven **/
+.respimg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body{
+    font-family: Helvatica, sans-serif ;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    color: black;
+    border-bottom: 2px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.logo {
+    height: 50px;
+}
