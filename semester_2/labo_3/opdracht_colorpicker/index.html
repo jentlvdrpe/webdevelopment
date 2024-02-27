@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Colorpicker</title>
+</head>
+<body>
+    <div class="colorPicker">
+        <div class="components">
+            <p>0 <input type="range" id="sliderR" value="127" min="0" max="255"> 255 </p>
+            <p>0 <input type="range" id="sliderG" value="127" min="0" max="255"> 255 </p>
+            <p>0 <input type="range" id="sliderB" value="127" min="0" max="255"> 255 </p>
+        </div>
+        <div class="parameters">
+            <p id="txtOutputRed">Red 0</p>
+            <p id="txtOutputGreen">Green 0</p>
+            <p id="txtOutputBlue">Blue 0</p>
+        </div>
+        <div class="block" id="colorPalette"></div>
+    </div>
+    <script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
+</body>
+</html>

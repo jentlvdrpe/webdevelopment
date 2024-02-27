@@ -1,0 +1,21 @@
+.block{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.parameters{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.colorPicker{
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+    width: 20%;
+}
