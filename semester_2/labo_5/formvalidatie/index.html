@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Formvalidatie</title>
+</head>
+<body>
+    <form method="get">
+        <label for="name">Voornaam</label>
+        <input type="text" id="name" autofocus>
+        <span id="nameError" class="errorTxt"></span>
+        <br>
+        <label for="surname">Familienaam</label>
+        <input type="text" id="surname">
+        <span id="surnameError" class="errorTxt"></span>
+        <br>
+        <label for="date">Geboortedatum</label>
+        <input type="text" id="date">
+        <span id="dateError" class="errorTxt"></span>
+        <br>
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <span id="emailError" class="errorTxt"></span>
+        <br>
+        <label for="#kinderen">Aantal kinderen</label>
+        <input type="text" id="#kinderen">
+        <span id="#kinderenError" class="errorTxt"></span>
+        <br>
+        <input type="button" value="Toon resultaat" id="submit">
+    </form>
+    <script src="scripts/code.js"></script>
+</body>
+</html>
