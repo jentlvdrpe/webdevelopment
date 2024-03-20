@@ -1,7 +1,13 @@
 const setup = () => {
-    let tekst = document.querySelectorAll('p');
-    for(let i = 0; i < tekst.length; ++i){
-        tekst[i].textContent = "Good Job!";
+    let list = document.querySelectorAll('li');
+
+    for(let i = 0; i<list.length;++i){
+        list.item(i).classList.add('listitem');
     }
+
+    let img = document.createElement('img');
+    img.setAttribute('src', 'images/Pasfoto_2023.jpg');
+    document.body.appendChild(img);
+
 }
 window.addEventListener("load", setup);
