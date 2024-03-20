@@ -10,6 +10,8 @@ const lidWoorden = (tekst) => {
         }
     }
 
+
+
     let zin = woorden.join(' ').trim();
     console.log(zin)
 }
