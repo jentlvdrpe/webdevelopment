@@ -1,0 +1,40 @@
+.block, .color-block{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.block {
+    border-radius: 10px;
+    background-color: RGB(127, 127, 127);
+}
+
+.parameters{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.colorPicker{
+    display: flex;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+    width: 23%;
+}
+
+#save-button {
+    margin-left: 20px;
+}
+
+#delete-button {
+    float: right;
+}
+
+#saved-colors {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
