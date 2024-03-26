@@ -9,7 +9,6 @@ const setup = () => {
 
     initializeColor();
 }
-
 const initializeColor = () => {
     // We stellen de start value van elke slider in
     let value = 127;
@@ -24,7 +23,6 @@ const initializeColor = () => {
         sliders[i].value = value;
     }
 }
-
 const update = (event) => {
     let colorPalette = document.querySelector("#colorPalette");
     let text = document.querySelectorAll(`.color-text`)
@@ -48,7 +46,6 @@ const update = (event) => {
             break;
     }
 }
-
 const saveColor = () => {
     let colorBlock = document.createElement('div');
     colorBlock.className = "color-block";
@@ -68,7 +65,6 @@ const saveColor = () => {
     let saveColors = document.querySelector('#saved-colors');
     saveColors.appendChild(colorBlock);
 }
-
 const setColor = (event) => {
     let colorBlock = event.currentTarget;
     let colorPalette = document.querySelector("#colorPalette");
@@ -82,7 +78,6 @@ const setColor = (event) => {
         text[i].textContent = `${rgb[i]}`;
     }
 }
-
 const deleteColor = (event) => {
     // Voorkom dat het event wordt doorgegeven aan de parent
     event.stopPropagation();
@@ -91,5 +86,4 @@ const deleteColor = (event) => {
     let saveColors = document.querySelector('#saved-colors');
     saveColors.removeChild(colorBlock);
 }
-
 window.addEventListener("load", setup);
