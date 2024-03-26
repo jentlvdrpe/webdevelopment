@@ -1,0 +1,14 @@
+#playField{
+    height: 800px;
+    width: 600px;
+    border: 1px solid black;
+    // aanvullen met hoogte en breedte
+}
+
+img{
+    position: absolute;
+}
+
+p {
+    display: inline-block;
+}
