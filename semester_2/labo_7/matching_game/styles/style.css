@@ -1,0 +1,17 @@
+.kaart {
+    width: 100px;
+    height: 100px;
+    margin: 5px 0 5px 0;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+body {
+    background-color: #CBE9FA;
+}
+
+#game-board{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
