@@ -1,9 +1,18 @@
 .kaart {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin: 5px 0 5px 0;
     border: 2px solid black;
     border-radius: 3px;
+    background-image: url('../images/kaart_achterkant.png');
+    background-size: cover;
+}
+
+.border-red {
+    border-color: red;
+}
+.border-green {
+    border-color: green;
 }
 
 body {
