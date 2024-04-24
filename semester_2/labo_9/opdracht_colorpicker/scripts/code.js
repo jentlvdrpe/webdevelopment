@@ -7,9 +7,9 @@ const setup = () => {
     let saveButton = document.querySelector("#save-button")
     saveButton.addEventListener('click', saveColor);
 
-    initializeColor();
+    initialize();
 }
-const initializeColor = () => {
+const initialize = () => {
     // We stellen de start value van elke slider in
     let value = 127;
 
@@ -17,10 +17,29 @@ const initializeColor = () => {
     let sliders = document.querySelectorAll('.slider');
     let text = document.querySelectorAll(`.color-text`);
 
-    colorPalette.style.backgroundColor = `RGB(${value}, ${value}, ${value})`;
-    for(let i=0; i<sliders.length;++i){
-        text[i].textContent = `${value}`;
-        sliders[i].value = value;
+    // Zet het kleur dat we laatst bekeken hebben
+    let lastColor = localStorage.getItem("colorpicker.lastColor");
+    if(lastColor){
+        colorPalette.style.backgroundColor = JSON.parse(lastColor);
+        let rgb = colorPalette.style.backgroundColor.match(/\d+/g);
+        for(let i=0; i<sliders.length;++i){
+            text[i].textContent = `${rgb[i]}`;
+            sliders[i].value = rgb[i];
+        }
+    } else {
+        colorPalette.style.backgroundColor = `RGB(${value}, ${value}, ${value})`;
+        for(let i=0; i<sliders.length;++i){
+            text[i].textContent = `${value}`;
+            sliders[i].value = value;
+        }
+    }
+
+    // Zet favorieten klaar
+    let colors = localStorage.getItem("colorpicker.colors");
+    if(colors){
+        JSON.parse(colors).forEach(color => {
+            favorite(color.r, color.g, color.b);
+        });
     }
 }
 const update = (event) => {
@@ -45,14 +64,24 @@ const update = (event) => {
             text[2].textContent = targetValue;
             break;
     }
+
+    localStorage.setItem("colorpicker.lastColor", JSON.stringify(colorPalette.style.backgroundColor));
 }
 const saveColor = () => {
+    // Sla op als favoriet
+    let colorPalette = document.querySelector("#colorPalette");
+    let rgb = colorPalette.style.backgroundColor.match(/\d+/g);
+    favorite(rgb[0], rgb[1], rgb[2]);
+
+    // Sla de kleur op in local storage
+    saveLocalStorage();
+}
+const favorite = (r, g, b) =>{
     let colorBlock = document.createElement('div');
     colorBlock.className = "color-block";
     //COLOR
-    let colorPalette = document.querySelector("#colorPalette");
-    let rgb = colorPalette.style.backgroundColor.match(/\d+/g);
-    colorBlock.style.backgroundColor = `RGB(${rgb[0]},${rgb[1]},${rgb[2]})`;
+    colorBlock.style.backgroundColor = `RGB(${r},${g},${b})`;
+
     // When clicked on the color, the palette changes
     colorBlock.addEventListener("click", setColor);
     // DELETE BUTTON
@@ -77,6 +106,8 @@ const setColor = (event) => {
         sliders[i].value = rgb[i];
         text[i].textContent = `${rgb[i]}`;
     }
+
+    localStorage.setItem("colorpicker.lastColor", JSON.stringify(colorPalette.style.backgroundColor));
 }
 const deleteColor = (event) => {
     // Voorkom dat het event wordt doorgegeven aan de parent
@@ -85,5 +116,21 @@ const deleteColor = (event) => {
     const colorBlock = event.currentTarget.parentNode;
     let saveColors = document.querySelector('#saved-colors');
     saveColors.removeChild(colorBlock);
+    // Local storage terug aanpassen
+    saveLocalStorage();
+}
+const saveLocalStorage = () => {
+    let colors = []
+    let colorBlocks = document.querySelectorAll(".color-block");
+    colorBlocks.forEach(colorblock => {
+        let rgb = colorblock.style.backgroundColor.match(/\d+/g);
+        let color = {
+            r: rgb[0],
+            g: rgb[1],
+            b: rgb[2]
+        }
+        colors.push(color)
+    });
+    localStorage.setItem("colorpicker.colors", JSON.stringify(colors));
 }
 window.addEventListener("load", setup);
