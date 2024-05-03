@@ -1,0 +1,60 @@
+.info {
+    font-size: 0.7em;
+    color: grey;
+}
+
+h2{
+    padding-top: 40px;
+}
+
+#zoekopdracht, #submit {
+    height: 40px;
+    border-radius: 5px;
+}
+
+#submit {
+    color: white;
+    background-color: green;
+    border: none;
+}
+
+div.google, div.youtube, div.x, div.instagram{
+    color: white;
+}
+
+div.google{
+    background-color: #4285f4;
+}
+a.google-btn{
+    color: white;
+    background-color: #ea4335;
+}
+a.youtube-btn{
+    color: white;
+    background-color: #282828
+;
+}
+a.x-btn{
+    color: white;
+    background-color: #1da1f2;
+}
+a.instagram-btn{
+    color: white;
+    background-color: #7232bd;
+}
+
+div.youtube{
+    background-color: #ff0000;
+}
+div.x{
+    background-color: #000000;
+}
+div.instagram{
+    background-color: #c32aa3;
+}
+
+.test {
+    background-color:  black;
+    width: 100px;
+    height: 100px;
+}

@@ -81,9 +81,9 @@ const favorite = (r, g, b) =>{
     colorBlock.className = "color-block";
     //COLOR
     colorBlock.style.backgroundColor = `RGB(${r},${g},${b})`;
-
     // When clicked on the color, the palette changes
     colorBlock.addEventListener("click", setColor);
+
     // DELETE BUTTON
     let deleteButton = document.createElement('button');
     deleteButton.setAttribute('id', 'delete-button');
@@ -131,6 +131,7 @@ const saveLocalStorage = () => {
         }
         colors.push(color)
     });
+
     localStorage.setItem("colorpicker.colors", JSON.stringify(colors));
 }
 window.addEventListener("load", setup);
